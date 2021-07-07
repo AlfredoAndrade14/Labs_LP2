@@ -27,18 +27,41 @@ public class CoisaCLI {
         }
     }
 
+    /**
+     * Função chamada quando o usuaria escrve "TEMPOONLINE"
+     * e passa o nome da disciplina e o tempo online na
+     * mesma linha separado por espaço.
+     * @param nome o nome da disciplina.
+     * @param tempo o tempo online gasto por um aluno.
+     */
     private static void registroOnline(String nome, int tempo) {
         RegistroTempoOnline disciplina = new RegistroTempoOnline(nome);
         disciplina.adicionaTempoOnline(tempo);
         System.out.println(disciplina.toString());
     }
 
+    /**
+     * Função chamada quando o usuaria escrve "DESPESA"
+     * e passa o gasto de um aluno mesma linha separado
+     * por espaço.
+     * @param gasto valor gasto em centavos por um aluno.
+     */
     private static void financas(int gasto) {
         RegistroFinancas minhaFinanca = new RegistroFinancas(10000, 4);
         minhaFinanca.pagaDespesa(gasto);
         System.out.println(minhaFinanca.toString());
     }
 
+    /**
+     * Função chamada quando o usuaria escrve "NOTAS"
+     * e passa o nome da disciplina e as notas dela
+     * mesma linha separado por espaço.
+     * @param materia o nome da disciplina.
+     * @param nota1 nota 1 da disciplina.
+     * @param nota2 nota 2 da disciplina.
+     * @param nota3 nota 3 da disciplina.
+     * @param nota4 nota 4 da disciplina.
+     */
     private static void disciplina(String materia, int nota1 ,int nota2 , int nota3 , int nota4) {
         Disciplina cadeira = new Disciplina(materia);
         cadeira.cadastraNota(1, nota1);
@@ -48,6 +71,15 @@ public class CoisaCLI {
         System.out.println(cadeira.toString());
     }
 
+    /**
+     * Função chamada quando o usuaria escrve "STATUS"
+     * e passa horas de descanso quantidade de semanas
+     * e um emoji que representa o estado do aluno na
+     * mesma linha separado por espaço.
+     * @param horas quantidade de horas de descanso.
+     * @param semanas quantidade de semanas.
+     * @param emoji emoji que representa o estado do aluno.
+     */
     public static void descanso(int horas, int semanas, String emoji) {
         Descanso descanso = new Descanso();
         descanso.defineHorasDescanso(horas);

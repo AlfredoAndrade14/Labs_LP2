@@ -110,15 +110,12 @@ public class Disciplina {
     }
 
     /**
-     * Calcula a soma e a media ponderada quando uma
-     * lista de pessos é passada na criação do objeto
-     * das quatro ou mais notaszera a soma para caso
-     * seja feito outra consulta com correção de notas
-     * não somar com o valor anterior e retorna true
-     * se a media for maior que 7 e false caso contrario.
-     * @return é true se a media for maior que 7 caso contrario é false
+     * Calcula a media ponderada ou a media
+     * acetimetrica quando uma lista de pessos é
+     * passada na criação do objeto das quatro ou mais
+     * notas.
      */
-    public boolean aprovado() {
+    private void calculaMedia() {
         for (int i = 0; i < notas.length; i++) {
             this.somaDasNotas += (this.notas[i] * this.pesos[i]);
             this.somaDosPesos += this.pesos[i];
@@ -126,6 +123,14 @@ public class Disciplina {
 
         this.mediaDasNotas = somaDasNotas / somaDosPesos;
         this.somaDasNotas = this.somaDosPesos = 0;
+    }
+
+     /**
+     * Verifica se a media do aluno é maior que 7 e false caso contrario.
+     * @return é true se a media for maior que 7 caso contrario é false
+     */
+    public boolean aprovado() {
+        calculaMedia();
         return (this.mediaDasNotas >= 7.0);
     }
 
