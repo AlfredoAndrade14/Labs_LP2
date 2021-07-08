@@ -30,23 +30,6 @@ public class Disciplina {
     private int pesos[];
 
     /**
-     * Valor da soma de todos os pesos
-     * das notas da disciplina
-     */
-    private int somaDosPesos;
-
-    /**
-     * Valor da soma de todas as notas
-     * da disciplina
-     */
-    private double somaDasNotas;
-
-    /**
-     * Media aritimética da quatro notas.
-     */
-    private double mediaDasNotas;
-
-    /**
      * Numero de horas de estudo.
      */
     private int tempoEstudo;
@@ -110,28 +93,27 @@ public class Disciplina {
     }
 
     /**
-     * Calcula a media ponderada ou a media
-     * acetimetrica quando uma lista de pessos é
-     * passada na criação do objeto das quatro ou mais
+     * Calcula a media ponderada  das quatro ou mais
      * notas.
      */
-    private void calculaMedia() {
+    private double calculaMedia() {
+        int somaDosPesos = 0;
+        double mediaDasNotas = 0;
         for (int i = 0; i < notas.length; i++) {
-            this.somaDasNotas += (this.notas[i] * this.pesos[i]);
-            this.somaDosPesos += this.pesos[i];
+            mediaDasNotas += (this.notas[i] * this.pesos[i]);
+            somaDosPesos += this.pesos[i];
         }
+        mediaDasNotas /= somaDosPesos;
 
-        this.mediaDasNotas = somaDasNotas / somaDosPesos;
-        this.somaDasNotas = this.somaDosPesos = 0;
+        return mediaDasNotas;
     }
 
      /**
-     * Verifica se a media do aluno é maior que 7 e false caso contrario.
+     * retorna se a media do aluno é maior que 7 true e false caso contrario.
      * @return é true se a media for maior que 7 caso contrario é false
      */
     public boolean aprovado() {
-        calculaMedia();
-        return (this.mediaDasNotas >= 7.0);
+        return (calculaMedia() >= 7.0);
     }
 
     /**
@@ -141,7 +123,6 @@ public class Disciplina {
      * @return a representação da disciplina.
      */
     public String toString() {
-        calculaMedia();
-        return (this.nomeDaDisciplina + " " + this.tempoEstudo + " " + this.mediaDasNotas + " " + Arrays.toString(notas));
+        return (this.nomeDaDisciplina + " " + this.tempoEstudo + " " + calculaMedia() + " " + Arrays.toString(notas));
     }
 }

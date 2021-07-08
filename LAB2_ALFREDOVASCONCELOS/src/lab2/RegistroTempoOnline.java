@@ -23,10 +23,9 @@ public class RegistroTempoOnline {
 
     /**
      * Quantidade de tempo esperado
-     * online, por padrão o tempo
-     * esperado é de 120 horas.
+     * online.
      */
-    private int metaDeHoras = 120;
+    private int metaDeHoras;
 
     /**
      * metódo construtor da classe para criar um objeto
@@ -48,6 +47,7 @@ public class RegistroTempoOnline {
      */
     public RegistroTempoOnline(String nome) {
         this.nomeDisciplina = nome;
+        this.metaDeHoras = 120;
     }
 
     /**

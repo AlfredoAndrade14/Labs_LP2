@@ -27,16 +27,9 @@ public class RegistroFinancas {
     private int gastos;
 
     /**
-     * Soma total do ganhos do aluno em centavos
-     * sem o saldo inicial.
+     * O saldo inicial do aluno.
      */
-    private int ganhos;
-
-    /**
-     * É o valor líquido disponível do aluno
-     * em centavos.
-     */
-    private int saldo;
+    private int ganhoInicial;
 
     /**
      * Recebe o saldo inicial do aluno em centavos
@@ -45,21 +38,16 @@ public class RegistroFinancas {
      * @param totalDeGanhos a quantidade de ganhos.
      */
     public RegistroFinancas(int ganhosIniciais, int totalDeGanhos) {
-        this.saldo = ganhosIniciais;
-        this.ganhos = ganhosIniciais;
+        this.ganhoInicial = ganhosIniciais;
         this.ganhosLista = new int[totalDeGanhos];
     }
 
     /**
-     * Recebe o valor recebido pelo aluno em centavos.
+     * Recebe o valor recebido pelo aluno em centavos e armazena.
      * @param valorCentavos valor ganho em centavos.
      * @param posicaoGanho posição desejada para armazenar o ganho.
      */
     public void adicionaGanhos(int valorCentavos, int posicaoGanho) {
-        this.ganhos -= this.ganhosLista[posicaoGanho - 1];
-        this.ganhos += valorCentavos;
-        this.saldo -= this.ganhosLista[posicaoGanho - 1];
-        this.saldo += valorCentavos;
         this.ganhosLista[posicaoGanho - 1] = valorCentavos;
     }
 
@@ -70,7 +58,6 @@ public class RegistroFinancas {
      * @param valorCentavos valor das despesas do aluno em centavos.
      */
     public void pagaDespesa(int valorCentavos) {
-        this.saldo -= valorCentavos;
         this.gastos += valorCentavos;
     }
 
@@ -83,7 +70,6 @@ public class RegistroFinancas {
      * @param detalhes descrição do gasto.
      */
     void pagaDespesa(int valorCentavos, String detalhes) {
-        this.saldo -= valorCentavos;
         this.gastos += valorCentavos;
         this.descricao.add(detalhes);
     }
@@ -120,11 +106,24 @@ public class RegistroFinancas {
     }
 
     /**
+     * função que calcula o valor total de ganhos
+     * do aluno.
+     * @return o valor total de ganhos.
+     */
+    private int somaGanhos(){
+        int ganhos = this.ganhoInicial;
+        for (int s : ganhosLista) {
+            ganhos += s;
+        }
+        return ganhos;
+    }
+
+    /**
      * Exibe um relatorio dos gasto, ganhos, saldo final
      * e inicial do aluno.
      * @return relatorio das finanças do aluno.
      */
     public String toString() {
-        return ("Total recebidos: " + ganhos + ", Despesas totais: " + gastos + ", Total disponível: " + saldo);
+        return ("Total recebidos: " + somaGanhos() + ", Despesas totais: " + this.gastos + ", Total disponível: " + (somaGanhos() - this.gastos));
     }
 }

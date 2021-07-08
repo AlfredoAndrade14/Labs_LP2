@@ -22,7 +22,7 @@ public class Descanso {
      * Variavel que representa o status do aluno
      * através de um emoji.
      */
-    private String emoji = "";
+    private String emoji;
 
     /**
      * Variavel que recebe o status do auno
@@ -35,7 +35,7 @@ public class Descanso {
      */
     public void defineHorasDescanso(int valor) {
         this.horasDeDescanso = valor;
-        this.emoji = "";
+        this.emoji = null;
     }
 
     /**
@@ -44,6 +44,7 @@ public class Descanso {
      */
     public void defineNumeroSemanas(int valor) {
         this.semanas = valor;
+        this.emoji = null;
     }
 
     /**
@@ -66,7 +67,7 @@ public class Descanso {
             this.status = (horasDeDescanso / semanas >= 26) ? "descansado" : "cansado";
         } else { this.status = "cansado"; }
 
-        if (this.emoji != "") {
+        if (this.emoji != null) {
             this.status += " " + this.emoji;
         }
         return this.status;
