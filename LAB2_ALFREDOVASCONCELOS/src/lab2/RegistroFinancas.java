@@ -15,7 +15,9 @@ public class RegistroFinancas {
      */
     private int[] ganhosLista;
 
-
+    /**
+     * Array list que armazena a descrição dos gastos.
+     */
     ArrayList<String> descricao = new ArrayList();
 
     /**

@@ -141,6 +141,7 @@ public class Disciplina {
      * @return a representação da disciplina.
      */
     public String toString() {
+        calculaMedia();
         return (this.nomeDaDisciplina + " " + this.tempoEstudo + " " + this.mediaDasNotas + " " + Arrays.toString(notas));
     }
 }

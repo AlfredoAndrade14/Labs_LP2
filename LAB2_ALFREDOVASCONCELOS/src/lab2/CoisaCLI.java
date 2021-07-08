@@ -10,19 +10,38 @@ import java.util.Scanner;
  */
 public class CoisaCLI {
     public static void main(String[] args) {
-        while (true) {
-            Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
+        boolean rodando = true;
+
+        System.out.println("Digite o comando ou para ver os comandos digite 'c', para sair digite 's'." );
+        while (rodando) {
             String linha = sc.nextLine();
             String[] comando = linha.split(" ");
 
-            if (comando[0].equals("TEMPOONLINE")) {
-                registroOnline(comando[1], Integer.parseInt(comando[2]));
-            } else if (comando[0].equals("DESPESA")) {
-                financas(Integer.parseInt(comando[1]));
-            } else if (comando[0].equals("NOTAS")) {
-                disciplina(comando[1], Integer.parseInt(comando[2]), Integer.parseInt(comando[3]), Integer.parseInt(comando[4]), Integer.parseInt(comando[5]));
-            } else if (comando[0].equals("STATUS")) {
-                descanso(Integer.parseInt(comando[1]), Integer.parseInt(comando[2]),comando[3]);
+            switch (comando[0].toUpperCase()) {
+                case "C":
+                    System.out.println("TEMPOONLINE nome tempo -=-=- Para registar o tempo online em uma disciplina. nome = nome da disciplina; tempo = tempo online"
+                    + "\nDESPESA gasto -=-=- para registrar um gasto e a descrição do gasto. gasto = valor em centavos"
+                    + "\nNOTAS nome n1 n2 n3 n4 -=-=- para registrar notas de uma disciplina. nome = nome da disciplina; n1-4 = notas"
+                    + "\nSTATUS horas semanas emoji -=-=- registra status de descanso do aluno. horas = horas de descanso; semanas = quantidade de semana; emoji = emoji de status");
+                    break;
+                case "S":
+                    rodando = false;
+                    break;
+                case "TEMPOONLINE":
+                    registroOnline(comando[1], Integer.parseInt(comando[2]));
+                    break;
+                case "DESPESA":
+                    financas(Integer.parseInt(comando[1]));
+                    break;
+                case "NOTAS":
+                    disciplina(comando[1], Integer.parseInt(comando[2]), Integer.parseInt(comando[3]), Integer.parseInt(comando[4]), Integer.parseInt(comando[5]));
+                    break;
+                case "STATUS":
+                    descanso(Integer.parseInt(comando[1]), Integer.parseInt(comando[2]),comando[3]);
+                    break;
+                default:
+                    System.out.println("Comando não reconhecido, tente novamente.");
             }
         }
     }
@@ -62,7 +81,7 @@ public class CoisaCLI {
      * @param nota3 nota 3 da disciplina.
      * @param nota4 nota 4 da disciplina.
      */
-    private static void disciplina(String materia, int nota1 ,int nota2 , int nota3 , int nota4) {
+    private static void disciplina(String materia, double nota1 ,double nota2 , double nota3 , double nota4) {
         Disciplina cadeira = new Disciplina(materia);
         cadeira.cadastraNota(1, nota1);
         cadeira.cadastraNota(2, nota2);
