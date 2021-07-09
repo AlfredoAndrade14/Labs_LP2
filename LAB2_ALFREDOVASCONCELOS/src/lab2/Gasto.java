@@ -28,11 +28,11 @@ public class Gasto {
      * Metodo construtor que recebe o
      * valor da despesa e a descrição dela.
      * @param valor o valor da despesa do aluno.
-     * @param decrição a descrição da despesa.
+     * @param decricao a descrição da despesa.
      */
-    public Gasto(int valor, String decrição){
+    public Gasto(int valor, String decricao){
         this.despesa = valor;
-        this.descricao = decrição;
+        this.descricao = decricao;
     }
 
     /**

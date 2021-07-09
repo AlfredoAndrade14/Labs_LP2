@@ -95,6 +95,7 @@ public class Disciplina {
     /**
      * Calcula a media ponderada  das quatro ou mais
      * notas.
+     * @return a media das notas
      */
     private double calculaMedia() {
         int somaDosPesos = 0;

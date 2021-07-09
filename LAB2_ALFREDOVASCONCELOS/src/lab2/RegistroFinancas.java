@@ -16,10 +16,9 @@ public class RegistroFinancas {
     private int[] ganhosLista;
 
     /**
-     * Arraylist que armazena a descrição e o valor
-     * dos gastos.
+     * Arraylist que armazena as despesas.
      */
-    ArrayList<Gasto> despesas = new ArrayList();
+    ArrayList<Gasto> despesas;
 
     /**
      * O saldo inicial do aluno.
@@ -35,6 +34,7 @@ public class RegistroFinancas {
     public RegistroFinancas(int ganhosIniciais, int totalDeGanhos) {
         this.ganhoInicial = ganhosIniciais;
         this.ganhosLista = new int[totalDeGanhos];
+        this.despesas = new ArrayList();
     }
 
     /**
@@ -52,8 +52,8 @@ public class RegistroFinancas {
      * @param valorCentavos valor das despesas do aluno em centavos.
      */
     public void pagaDespesa(int valorCentavos) {
-        Gasto valorPago = new Gasto(valorCentavos);
-        this.despesas.add(valorPago);
+        Gasto gasto = new Gasto(valorCentavos);
+        this.despesas.add(gasto);
     }
 
     /**
@@ -65,8 +65,8 @@ public class RegistroFinancas {
      * @param detalhes descrição do gasto.
      */
     void pagaDespesa(int valorCentavos, String detalhes) {
-        Gasto valorPago = new Gasto(valorCentavos,detalhes);
-        this.despesas.add(valorPago);
+        Gasto gasto = new Gasto(valorCentavos,detalhes);
+        this.despesas.add(gasto);
     }
 
     /**
@@ -90,7 +90,7 @@ public class RegistroFinancas {
      */
     private int somaGastos() {
         int gastos = 0;
-        for (int s = 0; s < despesas.toArray().length; s++) {
+        for (int s = 0; s < despesas.size(); s++) {
             gastos += this.despesas.get(s).getGasto();
         }
         return gastos;

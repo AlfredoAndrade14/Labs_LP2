@@ -20,10 +20,12 @@ public class CoisaCLI {
 
             switch (comando[0].toUpperCase()) {
                 case "C":
+                    System.out.println("----------------------------------------------------------------");
                     System.out.println("TEMPOONLINE nome tempo -=-=- Para registar o tempo online em uma disciplina. nome = nome da disciplina; tempo = tempo online"
                     + "\nDESPESA gasto -=-=- para registrar um gasto e a descrição do gasto. gasto = valor em centavos"
                     + "\nNOTAS nome n1 n2 n3 n4 -=-=- para registrar notas de uma disciplina. nome = nome da disciplina; n1-4 = notas"
                     + "\nSTATUS horas semanas emoji -=-=- registra status de descanso do aluno. horas = horas de descanso; semanas = quantidade de semana; emoji = emoji de status");
+                    System.out.println("----------------------------------------------------------------");
                     break;
                 case "S":
                     rodando = false;
