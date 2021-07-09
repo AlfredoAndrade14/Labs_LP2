@@ -16,15 +16,10 @@ public class RegistroFinancas {
     private int[] ganhosLista;
 
     /**
-     * Array list que armazena a descrição dos gastos.
+     * Arraylist que armazena a descrição e o valor
+     * dos gastos.
      */
-    ArrayList<String> descricao = new ArrayList();
-
-    /**
-     * Soma total dos valores das despesas
-     * do aluno em centavos.
-     */
-    private int gastos;
+    ArrayList<Gasto> despesas = new ArrayList();
 
     /**
      * O saldo inicial do aluno.
@@ -53,12 +48,12 @@ public class RegistroFinancas {
 
     /**
      * Recebe como parametro o valor dos gastos do aluno
-     * em centavos, subtrai do saldo do mesmo e soma ao
-     * montante de gastos.
+     * em centavos.
      * @param valorCentavos valor das despesas do aluno em centavos.
      */
     public void pagaDespesa(int valorCentavos) {
-        this.gastos += valorCentavos;
+        Gasto valorPago = new Gasto(valorCentavos);
+        this.despesas.add(valorPago);
     }
 
     /**
@@ -70,8 +65,8 @@ public class RegistroFinancas {
      * @param detalhes descrição do gasto.
      */
     void pagaDespesa(int valorCentavos, String detalhes) {
-        this.gastos += valorCentavos;
-        this.descricao.add(detalhes);
+        Gasto valorPago = new Gasto(valorCentavos,detalhes);
+        this.despesas.add(valorPago);
     }
 
     /**
@@ -89,24 +84,37 @@ public class RegistroFinancas {
     }
 
     /**
+     * Retorna a soma total dos valores das despesas
+     * do aluno em centavos.
+     * @return o valor total das despesas do aluno.
+     */
+    private int somaGastos() {
+        int gastos = 0;
+        for (int s = 0; s < despesas.toArray().length; s++) {
+            gastos += this.despesas.get(s).getGasto();
+        }
+        return gastos;
+    }
+
+    /**
      * Lista as 5 ultimas descrições dos
      * ultimos 5 gastos ou se a quantidade
      * de gastos for menor que 5 listas todas
      * as descrições.
-     * @return
+     * @return a descrição dos ultimos 5 gastos.
      */
-    String listarDetalhes() {
+    public String listarDetalhes() {
         String listagemDetalhes = "";
-        int inicio = (descricao.size() > 5) ? (descricao.size() - 5) : 0;
-        for (int i = inicio; i < descricao.size() - 1; i++) {
-            listagemDetalhes += descricao.get(i) + "\n";
+        int inicio = (despesas.size() > 5) ? (despesas.size() - 5) : 0;
+        for (int i = inicio; i < despesas.size() - 1; i++) {
+            listagemDetalhes += despesas.get(i).getDetalhe() + "\n";
         }
-        listagemDetalhes += descricao.get(descricao.size()-1);
+        listagemDetalhes += despesas.get(despesas.size()-1).getDetalhe();
         return listagemDetalhes;
     }
 
     /**
-     * função que calcula o valor total de ganhos
+     * Função que retorna o valor total de ganhos
      * do aluno.
      * @return o valor total de ganhos.
      */
@@ -124,6 +132,6 @@ public class RegistroFinancas {
      * @return relatorio das finanças do aluno.
      */
     public String toString() {
-        return ("Total recebidos: " + somaGanhos() + ", Despesas totais: " + this.gastos + ", Total disponível: " + (somaGanhos() - this.gastos));
+        return ("Total recebidos: " + somaGanhos() + ", Despesas totais: " + somaGastos() + ", Total disponível: " + (somaGanhos() - somaGastos()));
     }
 }

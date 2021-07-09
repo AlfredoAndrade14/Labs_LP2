@@ -25,7 +25,7 @@ public class Descanso {
     private String emoji;
 
     /**
-     * Variavel que recebe o status do auno
+     * Variavel que recebe o status do aluno.
      */
     private String status;
 

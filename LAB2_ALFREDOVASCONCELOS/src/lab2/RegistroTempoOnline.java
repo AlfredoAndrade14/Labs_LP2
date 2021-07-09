@@ -28,7 +28,7 @@ public class RegistroTempoOnline {
     private int metaDeHoras;
 
     /**
-     * metódo construtor da classe para criar um objeto
+     * Metódo construtor da classe para criar um objeto
      * passando o nome da disciplina e quantidade de horas
      * esperadas.
      * @param nome o nome da disciplina.
@@ -40,7 +40,7 @@ public class RegistroTempoOnline {
     }
 
     /**
-     * metódo construtor da classe para criar um objeto
+     * Metódo construtor da classe para criar um objeto
      * passando o nome da disciplina e quantidade de horas
      * esperadas padrão(120 horas).
      * @param nome o nome da disciplina.
@@ -51,7 +51,7 @@ public class RegistroTempoOnline {
     }
 
     /**
-     * adiciona o tempo online passado pelo aluno
+     * Adiciona o tempo online passado pelo aluno
      * todos os alunos começan com horas igual a 0.
      * @param tempo a quantidade de horas utilizadas.
      */
