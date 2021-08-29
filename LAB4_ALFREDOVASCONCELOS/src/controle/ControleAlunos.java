@@ -22,19 +22,21 @@ public class ControleAlunos {
     /**
      * Lsita de alunos que respoderam questões no quadro
      */
-    private ArrayList participacao;
+    private ArrayList<Aluno> participacao;
 
     /**
      * Método construtor do controle de alunos
      */
     public ControleAlunos() {
-        this.alunos = new HashMap();
-        this.grupos = new HashMap();
-        this.participacao = new ArrayList();
+        this.alunos = new HashMap<>();
+        this.grupos = new HashMap<>();
+        this.participacao = new ArrayList<>();
     }
 
     /**
-     * Método que cadastra um aluno e o adciona no Hashset.
+     * Método que recebe uma matricula de um aluno, o nome do aluno e o curso dele,
+     * cadastra ele e o adciona no Hashmap, retornando se a matricula já foi cadastrada
+     * e se foi realizado o cadastro.
      *
      * @param matricula Matrícula do aluno
      * @param nome Nome do aluno
@@ -52,7 +54,9 @@ public class ControleAlunos {
     }
 
     /**
-     * Busca o aluno através de uma matrícula.
+     * Busca o aluno através de uma matrícula que é recebida por parametro,
+     * retornando a representação do aluno caso ele exista ou mostrando que
+     * ele não foi cadastrado.
      *
      * @param matricula matrícula que sera buscada.
      * @return o aluno caso ele seja cadastrado.
@@ -66,7 +70,7 @@ public class ControleAlunos {
     }
 
     /**
-     * Cadastra um grupo.
+     * Cadastra um grupo, recebendo como parametro o nome e o tamanho do grupo.
      *
      * @param nomeGrupo Nome do Grupo
      * @param tamanho Tamanho do grupo (Vazio caso seja sem limite)
@@ -89,9 +93,10 @@ public class ControleAlunos {
     }
 
     /**
-     * Aloca um aluno a um grupo caso ambos existam.
+     * Recebe uma matricula de um aluno e o nome de um grupo, se o aluno e o grupo já
+     * estiverem cadastrados aloca o aluno no grupo.
      *
-      * @param matricula Matrícua do aluno.
+     * @param matricula Matrícua do aluno.
      * @param nomeGrupo Nome do grupo
      * @return Retorna o retorno do método alocaAluno do grupo,
      * ou se o aluno ou o grupo não foram cadastrados
@@ -107,6 +112,8 @@ public class ControleAlunos {
     }
 
     /**
+     * Recebe uma matricula de um aluno e o nome de um grupo, e se o aluno e o grupo já
+     * estiverem cadastrados verifica se o aluno faz parte do grupo.
      *
      * @param nomeGrupo Nome do Grupo
      * @param matricula Matrícula do aluno
@@ -128,13 +135,16 @@ public class ControleAlunos {
     }
 
     /**
-     * Adiciona um aluno a lista de alunos que participaram.
+     * Recebe uma matricula por parametro e adiciona o aluno da matricula na lista de alunos
+     * que participaram de atividades durante a aula caso esse aluno esteja cadastrado.
+     *
      * @param matricula Matrícula do aluno
      * @return Retorna se o aluno foi registrado ou se ele não foi cadastrado.
      */
     public String registraParticpacao(String matricula) {
         if (this.alunos.containsKey(matricula)) {
             this.participacao.add(this.alunos.get(matricula));
+            this.alunos.get(matricula).cadastraParticipacao();
             return "ALUNO REGISTRADO!";
         }
         return "Aluno não cadastrado.";
@@ -154,7 +164,7 @@ public class ControleAlunos {
     }
 
     /**
-     * Busca os grupos ao qual o aluno faz parte e retorna uma
+     * Recebe uma matricula por parametro e busca os grupos ao qual o aluno faz parte e retorna uma
      * lista com o nome deles.
      *
      * @param matricula Matrícula do aluno.
@@ -171,5 +181,92 @@ public class ControleAlunos {
             return lista;
         }
         return "Aluno não cadastrado.";
+    }
+
+    /**
+     * Método que percorre os alunos cadastrados, verifica caso esse aluno não tenha participado
+     * se assim for ele é adicionado a lista da representação textual para ser retornado junto
+     * com outros que não participaram.
+     *
+     * @return lista de aluno(s) que não participaram durante a aula.
+     */
+    public String alunosNaoParticiparam() {
+        String saida = "Alunos que não participaram:\n";
+        for (Aluno aluno: alunos.values()) {
+            if (aluno.getParticipacao() == 0) {
+                saida += aluno + "\n";
+            }
+        }
+
+        return saida;
+    }
+
+    /**
+     * Método que percorre os alunos cadastrados e analisa o numero de participação se for maior
+     * que o atual numero a lista para armazenar esses alunos é limpa, e esse aluno é adicionado,
+     * caso o numero seja igual ao já armazenado ele é adicionado a lista.
+     * pós isso é feito uma representação textual com esse(s) alunos e a retorna.
+     *
+     * @return lista de aluno(s) que mais participaram durante a aula.
+     */
+    public String alunosMaisChamados() {
+        int maiorNumeroDeChamadas = 0;
+        ArrayList<Aluno> maisChamados = new ArrayList<Aluno>();
+
+        for (Aluno aluno: alunos.values()) {
+            if (aluno.getParticipacao() > maiorNumeroDeChamadas) {
+                maiorNumeroDeChamadas = aluno.getParticipacao();
+                maisChamados.clear();
+                maisChamados.add(aluno);
+            }
+            else if (aluno.getParticipacao() == maiorNumeroDeChamadas && maiorNumeroDeChamadas > 0) {
+                maisChamados.add(aluno);
+            }
+        }
+
+        String saida = "Aluno(s) mais chamado(s):\n";
+        for (Aluno alunoMaisChamado: maisChamados) {
+            saida += alunoMaisChamado + "- Vezes chamado: " + alunoMaisChamado.getParticipacao()+ "\n";
+        }
+        return saida;
+    }
+
+    /**
+     * Método que percorre os alunos cadastrados, verifica de qual curso
+     * ele faz parte e adiciona o numero de participações dele, se for maior que zero, ao valor do
+     * curso, caso alguém desse curso já sido analizado e tenha participado, caso contrario é criado
+     * uma chave com esse curso e o valor sera o numero de participação do aluno.
+     * Que é armazenado em um hashmap e após isso é feito uma representação textual ordenada do curso
+     * com mais participação ao com menos.
+     *
+     * @return representação textual da quantidade de participação de alunos por curso ordenado
+     * do com mais participação ao com menos.
+     */
+    public String alunosPorCurso() {
+        HashMap<String, Integer> cursos = new HashMap<String, Integer>();
+        int maisVezesChamado = 0;
+
+        for (Aluno aluno: alunos.values()) {
+            if (aluno.getParticipacao() > 0) {
+                String cursoAluno = aluno.getCurso();
+                if (cursos.containsKey(cursoAluno)) {
+                    cursos.put(cursoAluno, ((cursos.get(cursoAluno) + aluno.getParticipacao())));
+                } else {
+                    cursos.put(cursoAluno, aluno.getParticipacao());
+                }
+                maisVezesChamado = cursos.get(cursoAluno) > maisVezesChamado ? cursos.get(cursoAluno) : maisVezesChamado;
+            }
+        }
+
+        String saida = "Numero de alunos chamados por curso:\n";
+
+        for (int i = maisVezesChamado;i > 0; i--) {
+            for (String curso: cursos.keySet()) {
+                if (cursos.get(curso) == i){
+                    saida += curso + " - Numero de vezes: " + i +"\n";
+                }
+            }
+        }
+        return saida;
     }
 }

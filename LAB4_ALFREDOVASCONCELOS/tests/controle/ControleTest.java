@@ -69,6 +69,27 @@ public class ControleTest {
     }
 
     @Test
+    void testAlocaAlunoMaiusculo() {
+        this.controle.cadastraGrupo("Programação OO","");
+
+        assertEquals("ALUNO ALOCADO!",this.controle.alocaAluno("200","PROGRAMAÇÃO OO"));
+    }
+
+    @Test
+    void testAlocaAlunoMinusculo() {
+        this.controle.cadastraGrupo("Programação OO","");
+
+        assertEquals("ALUNO ALOCADO!",this.controle.alocaAluno("200","programação oo"));
+    }
+
+    @Test
+    void testAlocaAlunoVariado() {
+        this.controle.cadastraGrupo("Programação OO","");
+
+        assertEquals("ALUNO ALOCADO!",this.controle.alocaAluno("200","ProGraMaÇão Oo"));
+    }
+
+    @Test
     void testAlocaAlunoSegundaVez() {
         this.controle.cadastraGrupo("Programação OO","");
         assertEquals("ALUNO ALOCADO!",this.controle.alocaAluno("200","Programação OO"));
@@ -102,6 +123,30 @@ public class ControleTest {
         this.controle.alocaAluno("250", "Listas");
 
         assertEquals("ALUNO PERTENCE AO GRUPO",this.controle.pertence("Listas","250"));
+    }
+
+    @Test
+    void testPertenceMaiuscula() {
+        this.controle.cadastraGrupo("Listas","1");
+        this.controle.alocaAluno("250", "Listas");
+
+        assertEquals("ALUNO PERTENCE AO GRUPO",this.controle.pertence("LISTAS","250"));
+    }
+
+    @Test
+    void testPertenceMinuscula() {
+        this.controle.cadastraGrupo("Listas","1");
+        this.controle.alocaAluno("250", "Listas");
+
+        assertEquals("ALUNO PERTENCE AO GRUPO",this.controle.pertence("listas","250"));
+    }
+
+    @Test
+    void testPertenceVariado() {
+        this.controle.cadastraGrupo("Listas","1");
+        this.controle.alocaAluno("250", "Listas");
+
+        assertEquals("ALUNO PERTENCE AO GRUPO",this.controle.pertence("LisTaS","250"));
     }
 
     @Test
@@ -160,5 +205,33 @@ public class ControleTest {
         this.controle.alocaAluno("250", "Listas");
 
         assertEquals("Grupos:\n- Programação OO\n- Listas\n",this.controle.getGrupos("250"));
+    }
+
+    @Test
+    void testAlunosNaoParticiparam() {
+        this.controle.registraParticpacao("200");
+        this.controle.registraParticpacao("201");
+
+        assertEquals("Alunos que não participaram:\n202 - Angela Ziegler - Medicina\n250 - Gabriel Reyes - Computação\n", this.controle.alunosNaoParticiparam());
+    }
+
+    @Test
+    void testAlunosMaisChamados() {
+        this.controle.registraParticpacao("200");
+        this.controle.registraParticpacao("201");
+        this.controle.registraParticpacao("200");
+        this.controle.registraParticpacao("250");
+
+        assertEquals("Aluno(s) mais chamado(s):\n200 - Lili Camposh - Computação- Vezes chamado: 2\n", this.controle.alunosMaisChamados());
+    }
+
+    @Test
+    void testNumeroDeAlunosPorCurso() {
+        this.controle.registraParticpacao("202");
+        this.controle.registraParticpacao("200");
+        this.controle.registraParticpacao("202");
+        this.controle.registraParticpacao("250");
+
+        assertEquals("Numero de alunos chamados por curso:\nComputação - Numero de vezes: 2\nMedicina - Numero de vezes: 2\n", controle.alunosPorCurso());
     }
 }

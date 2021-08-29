@@ -35,6 +35,7 @@ public class Main {
                         (R)egistrar Aluno que Respondeu
                         (I)mprimir Alunos que Responderam
                         (O)lhaí quais Grupos o Aluno Tá.
+                        (Es)tatísticas.
                         (S)im, quero Fechar o Programa!
                         Opção>\s""");
         return scanner.nextLine().toUpperCase();
@@ -57,6 +58,7 @@ public class Main {
             case "R" -> registraParticpacao(controle, scanner);
             case "I" -> listaAlunos(controle);
             case "O" -> buscaGrupos(controle, scanner);
+            case "Es" -> estatisticas(controle);
             case "S" -> System.exit(0);
             default -> {
                 if(opcao.isEmpty()){throw new IllegalArgumentException("Entrada Inválida");}
@@ -97,7 +99,9 @@ public class Main {
     }
 
     /**
-     * Busca um aluno no Controle de alunos
+     * Recebe da entrada do usuario a matricula que deseja
+     * ser buscada no Controle de alunos e o retorna caso o aluno
+     * esteja cadastrado
      *
      * @param controle Controle de Alunos que está sendo manipulado.
      * @param scanner Scanner para pedir informações do contato.
@@ -114,7 +118,8 @@ public class Main {
     }
 
     /**
-     * Cadastra um Grupo no controle de alunos
+     * Cadastra um Grupo no controle de alunos, antes verificando
+     * se o nome do grupo é um nome valido.
      *
      * @param controle Controle de Alunos que está sendo manipulado.
      * @param scanner Scanner para pedir informações do contato.
@@ -135,7 +140,10 @@ public class Main {
 
     /**
      * Aloca Aluno a um grupo ou verifica se o aluno pertece a um determinado
-     * grupo.
+     * grupo dependendo da entrada do usuario, depois que o usuario selecionar
+     * a funcionalidade desejada é colhido pela entrada do usuario a maricula
+     * e o nome do grupo.
+     *
      * @param controle Controle de Alunos que está sendo manipulado.
      * @param scanner Scanner para pedir informações do contato.
      */
@@ -169,7 +177,8 @@ public class Main {
     }
 
     /**
-     * Registra no controle de alunos a participação de um aluno.
+     * Recebe a matricula de um aluno, pela entrada do usuario, e envia para
+     * o controle de alunos a participação de um aluno.
      *
      * @param controle Controle de Alunos que está sendo manipulado.
      * @param scanner Scanner para pedir informações do contato.
@@ -186,7 +195,8 @@ public class Main {
     }
 
     /**
-     * Imprime uma lista com os Alunos que participaram.
+     * Imprime uma lista com os Alunos cadastrados que participaram
+     * das atividades da aula.
      *
      * @param controle Controle de Alunos que está sendo manipulado.
      */
@@ -195,7 +205,8 @@ public class Main {
     }
 
     /**
-     * Retorna uma lista de grupos que o aluno faz parte.
+     * Recebe a matricula de um aluno, pela entrada do usuario, e caso ele esteja cadastrado
+     * retorna uma lista de grupos que o aluno faz parte.
      *
      * @param controle Controle de Alunos que está sendo manipulado.
      * @param scanner Scanner para pedir informações do contato.
@@ -209,5 +220,19 @@ public class Main {
         }
 
         System.out.print(controle.getGrupos(matricula));
+    }
+
+    /**
+     * Método que retorna as estatisticas do controle
+     * de alunos a respeito da participação dos alunos;
+     *
+     * @param controle Retorna o(s) aluno(s) que mais participaram,
+     *                 a quantidade de alunos que participaram por
+     *                 curso e os alunos que não participaram.
+     */
+    private static void estatisticas(ControleAlunos controle) {
+        System.out.print(controle.alunosMaisChamados());
+        System.out.print(controle.alunosPorCurso());
+        System.out.print(controle.alunosNaoParticiparam());
     }
 }

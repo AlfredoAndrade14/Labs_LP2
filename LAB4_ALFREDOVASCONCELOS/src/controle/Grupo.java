@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Objects;
 
 /**
- * Classe que representa um Grupo.
+ * Classe que representa um Grupo, que pode ter ou não um limite.
  *
  * @author Alfredo Vasconcelos
  */
@@ -26,7 +26,8 @@ public class Grupo {
     private HashMap<String, Aluno> alunosDoGrupo;
 
     /**
-     * Método construtor do grupo com limite.
+     * Método construtor de grupo com limite, recebe como parametro o nome do grupo
+     * e o limite dele.
      *
      * @param nome nome do grupo.
      * @param tamanhoDoGrupo tamanho do grupo.
@@ -42,7 +43,7 @@ public class Grupo {
     }
 
     /**
-     * Método construtor do grupo sem limite.
+     * Método construtor de grupo sem limite, recebe como parametro o nome do grupo.
      *
      * @param nome nome do grupo.
      */
@@ -57,9 +58,13 @@ public class Grupo {
     }
 
     /**
-     * Método que aloca um aluno no grupo caso tenha limite disponovel.
+     * Método que recebe como parametro a matricula de um aluno e
+     * o objeto que representa o aluno da matricula e aloca esse
+     * aluno no grupo caso tenha limite disponivel,caso
+     * o grupo esteja cheio retorna que ele esta cheio.
      *
      * @param aluno Aluno.
+     * @param matricula matricula do aluno a ser alocado
      * @return Retorna se o aluno foi alocado ou se o grupo está cheio.
      */
     public String alocaAluno(String matricula, Aluno aluno) {
@@ -75,7 +80,8 @@ public class Grupo {
     }
 
     /**
-     * Verifica se o aluno faz parte do grupo.
+     * Recebe como parametro a matricula de um aluno verifica se ele faz parte do grupo,
+     * caso faça parte retorna true, caso contrario retorna false.
      *
      * @param matricula Matrícula do aluno.
      * @return Retrona true caso o aluno faça parte e false caso contrario.

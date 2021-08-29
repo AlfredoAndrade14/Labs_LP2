@@ -40,4 +40,15 @@ public class AlunoTest {
     void testToString() {
         assertEquals("123 - Alfredo - CC",this.aluno.toString());
     }
+
+    @Test
+    void testAdicionaparticipacaoEGetParticipacao() {
+        this.aluno.cadastraParticipacao();
+        assertEquals(1,this.aluno.getParticipacao());
+    }
+
+    @Test
+    void testGetCurso() {
+        assertEquals("CC", this.aluno.getCurso());
+    }
 }
