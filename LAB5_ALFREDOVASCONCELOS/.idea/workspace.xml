@@ -2,27 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d039155d-dbb2-4211-b3c2-8f47c21f5011" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/biblitex/BreakpointLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/biblitex/CamelCasefy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/biblitex/Clean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/biblitex/ConsoleLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/biblitex/ContagemLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/biblitex/InterrogaPraPontos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/biblitex/Logger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/biblitex/TimeConsoleLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/biblitex/Transformacao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/biblitex/BreakpointLoggerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/biblitex/CamelCasefyTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/biblitex/CleanSpacesTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/biblitex/CleanTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/biblitex/ConsoleLoggerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/biblitex/ContagemLoggerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/biblitex/InterrogaPraPontoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/biblitex/LoggersTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/biblitex/RemoveVogaisTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/biblitex/TimeConsoleLoggerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/biblitex/UpperCaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LAB5_ALFREDOVASCONCELOS/biblitex/TransformaTexto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAB5_ALFREDOVASCONCELOS/biblitex/TransformaTexto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/LAB5_ALFREDOVASCONCELOS/biblitex/TransformaTextoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/LAB5_ALFREDOVASCONCELOS/biblitex/TransformaTextoTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblitex/TransformaTexto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblitex/TransformaTexto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/biblitex/TransformaTextoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/biblitex/TransformaTextoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,8 +43,8 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="JUnit.TransformaTextoTest.testTransformaNaoexiste">
-    <configuration name="TransformaTextoTest.testContaTransformacoes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TransformaTextoTest.testCadastraTransformacaoNomeVazio">
+    <configuration name="TransformaTextoTest.testCadastraTransformacaoNomeVazio" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LAB5_ALFREDOVASCONCELOS" />
       <extension name="coverage">
         <pattern>
@@ -70,55 +54,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="biblitex" />
       <option name="MAIN_CLASS_NAME" value="biblitex.TransformaTextoTest" />
-      <option name="METHOD_NAME" value="testContaTransformacoes" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TransformaTextoTest.testContaTransformações" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LAB5_ALFREDOVASCONCELOS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="biblitex.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="biblitex" />
-      <option name="MAIN_CLASS_NAME" value="biblitex.TransformaTextoTest" />
-      <option name="METHOD_NAME" value="testContaTransformações" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TransformaTextoTest.testHistoricoErroPosicaoMaior" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LAB5_ALFREDOVASCONCELOS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="biblitex.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="biblitex" />
-      <option name="MAIN_CLASS_NAME" value="biblitex.TransformaTextoTest" />
-      <option name="METHOD_NAME" value="testHistoricoErroPosicaoMaior" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TransformaTextoTest.testHistoricoErroPosicaoMenor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LAB5_ALFREDOVASCONCELOS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="biblitex.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="biblitex" />
-      <option name="MAIN_CLASS_NAME" value="biblitex.TransformaTextoTest" />
-      <option name="METHOD_NAME" value="testHistoricoErroPosicaoMenor" />
+      <option name="METHOD_NAME" value="testCadastraTransformacaoNomeVazio" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,13 +76,61 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TransformaTextoTest.testTransformaParametrosVazios" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LAB5_ALFREDOVASCONCELOS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="biblitex.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="biblitex" />
+      <option name="MAIN_CLASS_NAME" value="biblitex.TransformaTextoTest" />
+      <option name="METHOD_NAME" value="testTransformaParametrosVazios" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransformaTextoTest.testTransformaTextoVazio" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LAB5_ALFREDOVASCONCELOS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="biblitex.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="biblitex" />
+      <option name="MAIN_CLASS_NAME" value="biblitex.TransformaTextoTest" />
+      <option name="METHOD_NAME" value="testTransformaTextoVazio" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransformaTextoTest.testTransformaTransformacaoVazia" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LAB5_ALFREDOVASCONCELOS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="biblitex.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="biblitex" />
+      <option name="MAIN_CLASS_NAME" value="biblitex.TransformaTextoTest" />
+      <option name="METHOD_NAME" value="testTransformaTransformacaoVazia" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TransformaTextoTest.testCadastraTransformacaoNomeVazio" />
+        <item itemvalue="JUnit.TransformaTextoTest.testTransformaParametrosVazios" />
+        <item itemvalue="JUnit.TransformaTextoTest.testTransformaTransformacaoVazia" />
+        <item itemvalue="JUnit.TransformaTextoTest.testTransformaTextoVazio" />
         <item itemvalue="JUnit.TransformaTextoTest.testTransformaNaoexiste" />
-        <item itemvalue="JUnit.TransformaTextoTest.testContaTransformacoes" />
-        <item itemvalue="JUnit.TransformaTextoTest.testContaTransformações" />
-        <item itemvalue="JUnit.TransformaTextoTest.testHistoricoErroPosicaoMaior" />
-        <item itemvalue="JUnit.TransformaTextoTest.testHistoricoErroPosicaoMenor" />
       </list>
     </recent_temporary>
   </component>

@@ -73,8 +73,12 @@ public class TransformaTexto {
      * @return O texto depois de transformado.
      */
     public String transforma(String transformacao, String texto) {
-        if (this.logger != null){
+        if (this.logger != null) {
             this.logger.log("transforma",transformacao);
+        }
+
+        if(transformacao.isEmpty() || texto.isEmpty()) {
+            throw new IllegalArgumentException("Argumento invalido");
         }
 
         if (transformacoes.containsKey(transformacao)) {
@@ -93,7 +97,7 @@ public class TransformaTexto {
      * @return numero de transformações textuais realizadas.
      */
     public int contaTransformacao() {
-        if (this.logger != null){
+        if (this.logger != null) {
             this.logger.log("contaTransformacao");
         }
 
@@ -108,7 +112,7 @@ public class TransformaTexto {
      * @return historico de uma determinada transformação.
      */
     public String historico(int posicao) {
-        if (this.logger != null){
+        if (this.logger != null) {
             this.logger.log("historico", Integer.toString(posicao));
         }
 
@@ -125,7 +129,7 @@ public class TransformaTexto {
      * @return lista com os textos originais das transformações sem repetição.
      */
     public String listarOriginais() {
-        if (this.logger != null){
+        if (this.logger != null) {
             this.logger.log("listarOriginais");
         }
 
@@ -143,7 +147,7 @@ public class TransformaTexto {
      * @return lista em ordem alfabetica das transformações cadastradas.
      */
     public String listarTransformacoes() {
-        if (this.logger != null){
+        if (this.logger != null) {
             this.logger.log("listarTransformacoes");
         }
 
@@ -165,7 +169,11 @@ public class TransformaTexto {
      * @param Algoritmo objeto que representa o algoritimo de transformação.
      */
     public void cadastraTransformacao(String nomeTransformacao, Transformacao Algoritmo) {
-        if (this.logger != null){
+        if(nomeTransformacao.isEmpty()) {
+            throw new IllegalArgumentException("Argumento invalido");
+        }
+
+        if (this.logger != null) {
             this.logger.log("cadastraTransformacao");
         }
 

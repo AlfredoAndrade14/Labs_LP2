@@ -20,6 +20,21 @@ public class TransformaTextoTest {
     }
 
     @Test
+    void testTransformaTextoVazio() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> this.tt.transforma("clean",""));
+    }
+
+    @Test
+    void testTransformaTransformacaoVazia() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> this.tt.transforma("","teste 123"));
+    }
+
+    @Test
+    void testTransformaParametrosVazios() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> this.tt.transforma("",""));
+    }
+
+    @Test
     void testTransformaCamelCaseFY() {
         assertEquals("OlÁ, tUdO BeM?",this.tt.transforma("CaMeLcAsEfY", "Olá, tudo bem?"));
     }
@@ -92,5 +107,10 @@ public class TransformaTextoTest {
     @Test
     void testListaTransformacoes() {
         assertEquals("CaMeLcAsEfY\nclean\ncleanSpaces\nInterrogaPraPontos\nRemoveVogais\nupperCase\n", this.tt.listarTransformacoes());
+    }
+
+    @Test
+    void testCadastraTransformacaoNomeVazio() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> this.tt.cadastraTransformacao("",new UpperCase()));
     }
 }
