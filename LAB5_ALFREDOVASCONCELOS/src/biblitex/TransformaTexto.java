@@ -84,7 +84,7 @@ public class TransformaTexto {
         if (transformacoes.containsKey(transformacao)) {
             String textoFormatado = this.transformacoes.get(transformacao).transforma(texto);
             this.originais.add(texto);
-            this.historico.add(texto + " " + transformacao + " -> " + textoFormatado);
+            this.historico.add(texto + " " + this.transformacoes.get(transformacao).getNome() + " -> " + textoFormatado);
 
             return textoFormatado;
         }

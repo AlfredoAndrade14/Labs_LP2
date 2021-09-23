@@ -3,10 +3,81 @@
   <component name="ChangeListManager">
     <list default="true" id="d039155d-dbb2-4211-b3c2-8f47c21f5011" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/allclasses-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/allpackages-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/BreakpointLogger.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/BreakpointLoggerTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/CamelCasefy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/CamelCasefyTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/Clean.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/CleanSpaces.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/CleanSpacesTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/CleanTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/ConsoleLogger.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/ConsoleLoggerTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/ContagemLogger.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/ContagemLoggerTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/InterrogaPraPontoTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/InterrogaPraPontos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/Logger.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/LoggersTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/RemoveVogais.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/RemoveVogaisTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/TimeConsoleLogger.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/TimeConsoleLoggerTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/TransformaTexto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/TransformaTextoTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/Transformacao.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/UpperCase.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/UpperCaseTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/biblitex/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/element-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/index-files/index-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/index-files/index-10.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/index-files/index-11.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/index-files/index-12.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/index-files/index-13.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/index-files/index-14.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/index-files/index-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/index-files/index-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/index-files/index-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/index-files/index-5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/index-files/index-6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/index-files/index-7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/index-files/index-8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/index-files/index-9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/jquery-ui.overrides.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/module-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/package-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/resources/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/resources/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/script-dir/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/script-dir/images/ui-bg_glass_65_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/script-dir/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/script-dir/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/script-dir/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/script-dir/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/script-dir/images/ui-icons_222222_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/script-dir/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/script-dir/images/ui-icons_454545_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/script-dir/images/ui-icons_888888_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/script-dir/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/script-dir/jquery-3.5.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/script-dir/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/script-dir/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/script-dir/jquery-ui.structure.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/tag-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/type-search-index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LAB5_ALFREDOVASCONCELOS/biblitex/TransformaTexto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAB5_ALFREDOVASCONCELOS/biblitex/TransformaTexto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/LAB5_ALFREDOVASCONCELOS/biblitex/TransformaTextoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/LAB5_ALFREDOVASCONCELOS/biblitex/TransformaTextoTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/biblitex/TransformaTexto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblitex/TransformaTexto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/biblitex/TransformaTextoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/biblitex/TransformaTextoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,12 +109,27 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="16" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LAB4_ALFREDOVASCONCELOS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LAB6_ALFREDOVASCONCELOS" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="JUnit.TransformaTextoTest.testCadastraTransformacaoNomeVazio">
+  <component name="RunManager" selected="JUnit.TransformaTextoTest">
+    <configuration name="TransformaTextoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LAB5_ALFREDOVASCONCELOS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="biblitex.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="biblitex" />
+      <option name="MAIN_CLASS_NAME" value="biblitex.TransformaTextoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TransformaTextoTest.testCadastraTransformacaoNomeVazio" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LAB5_ALFREDOVASCONCELOS" />
       <extension name="coverage">
@@ -55,22 +141,6 @@
       <option name="PACKAGE_NAME" value="biblitex" />
       <option name="MAIN_CLASS_NAME" value="biblitex.TransformaTextoTest" />
       <option name="METHOD_NAME" value="testCadastraTransformacaoNomeVazio" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TransformaTextoTest.testTransformaNaoexiste" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LAB5_ALFREDOVASCONCELOS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="biblitex.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="biblitex" />
-      <option name="MAIN_CLASS_NAME" value="biblitex.TransformaTextoTest" />
-      <option name="METHOD_NAME" value="testTransformaNaoexiste" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -126,11 +196,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TransformaTextoTest" />
         <item itemvalue="JUnit.TransformaTextoTest.testCadastraTransformacaoNomeVazio" />
         <item itemvalue="JUnit.TransformaTextoTest.testTransformaParametrosVazios" />
         <item itemvalue="JUnit.TransformaTextoTest.testTransformaTransformacaoVazia" />
         <item itemvalue="JUnit.TransformaTextoTest.testTransformaTextoVazio" />
-        <item itemvalue="JUnit.TransformaTextoTest.testTransformaNaoexiste" />
       </list>
     </recent_temporary>
   </component>
