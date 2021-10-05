@@ -68,7 +68,7 @@ public class DocumentoController {
 	}
 
 	/**
-	 * Recupera um documento retornando um Optional<Documento> vazio caso o
+	 * Recupera um documento retornando um Optional do tipo Documento vazio caso o
 	 * documento não seja encontrado.
 	 * 
 	 * @param id ID do documento a ser recuperado.

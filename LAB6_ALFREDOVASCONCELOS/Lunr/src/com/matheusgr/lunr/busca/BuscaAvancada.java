@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class BuscaAvancada implements Busca{
+
     private Map<String, String> metadados;
 
     /**
@@ -53,6 +54,13 @@ public class BuscaAvancada implements Busca{
      */
     @Override
     public String[][] descreveConsulta() {
-        return new String[0][];
+        String[][] resultado = new String[this.metadados.size()][];
+        int i = 0;
+
+        for (String metadado : metadados.keySet()) {
+            resultado[i] = new String[] {"Metadado: ", metadado};
+            i++;
+        }
+        return resultado;
     }
 }

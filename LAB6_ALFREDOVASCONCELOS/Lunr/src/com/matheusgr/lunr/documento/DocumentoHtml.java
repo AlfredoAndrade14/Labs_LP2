@@ -63,8 +63,8 @@ class DocumentoHtml extends DocumentoAbstract {
 
 	/**
 	 * Os metadados especificos do HTML incluem, especificamente:
-	 * - Quantidade de tags, estimada a partir da quantidade de símbolos <
-	 * - Todo o corpo da tag <head>
+	 * Quantidade de tags, estimada a partir da quantidade de símbolos de desigualdade
+	 * tudo que estiver no corpo da tag head
 	 */
 	protected Map<String, String> extractMetadadosEspecificos(String original2) {
 		Map<String, String> metadados2 = new HashMap<>();

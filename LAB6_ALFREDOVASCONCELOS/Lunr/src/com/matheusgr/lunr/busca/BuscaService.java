@@ -54,6 +54,8 @@ public class BuscaService {
 	 * Toda busca deve:
 	 * - ordenar de acordo com o valor de relevância (valor no mapa)
 	 * - retornar até 5 elementos (ou menos)
+	 * @param respostaDocumento Lista de Documentos
+	 * @return Lista de documentos ordenados
 	 */
 	private DocumentoDTO[] ordena(Map<Documento, Integer> respostaDocumento) {
 		return respostaDocumento.entrySet().stream()

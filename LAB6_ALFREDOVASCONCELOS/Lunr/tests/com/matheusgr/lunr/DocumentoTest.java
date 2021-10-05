@@ -6,6 +6,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 class DocumentoTest extends BaseTest {
 
 	@Test
@@ -53,5 +56,20 @@ class DocumentoTest extends BaseTest {
 		assertArrayEquals(new String[] {"DUAS", "apenas", "arquivo", "linhas", "simples", "texto", "um", "use"}, doc.getTexto());
 		assertEquals(0.80, doc.metricaTextoUtil(), 0.01);
 	}
-	
+
+	@Test
+	void testTotalDocumentos() {
+		assertEquals(4, this.documentoController.totalDocumentos());
+	}
+
+	@Test
+	void testConcatena() {
+		assertEquals("_MERGE789|ABC", this.documentoController.concatenaDocumentos(TEXTO1_ID,TEXTO2_ID));
+		assertTrue(true, String.valueOf(this.documentoController.recuperarDocumento("_MERGE789|ABC").isPresent()));
+	}
+
+	@Test
+	void sumariza() {
+		assertArrayEquals(new String[] {"apenas", "arquivo", "simples", "linhas"}, this.documentoController.sumariza(TEXTO1_ID));
+	}
 }
