@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.matheusgr.lunr"},{"l":"com.matheusgr.lunr.busca"},{"l":"com.matheusgr.lunr.documento"},{"l":"com.matheusgr.similaridade"}]
